@@ -11,7 +11,7 @@ Kord Snap & Solve is a React Native Expo app that can easily solve mathematical 
 - **REST API Integration**: Communicate with RESTful APIs to fetch or send data.
 - **User Authentication**: Implement user authentication features using Firebase Auth.
 - **MathPix OCR API**: Implement OCR API for converting images to LATEX.
-- **CHATGPT **: Implement GPT-3.5 Turbo for solving LATEX to step by step mathematical solution.
+- **CHATGPT**: Implement GPT-3.5 Turbo for solving LATEX to step by step mathematical solution.
 
 ## Getting Started
 
