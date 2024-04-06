@@ -6,13 +6,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./*"
       ]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "babel.config.js"
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
   ]
 }

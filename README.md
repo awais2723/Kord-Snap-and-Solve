@@ -4,7 +4,7 @@ Kord Snap & Solve is a React Native Expo app that can easily solve mathematical 
 
 ## Features
 
-- **Routing**: Easily navigate between screens using React Navigation.
+- **Routing**: Easily navigate between screens using Expo App Router.
 - **Theming**: Implement custom themes for app using Context API.
 - **Custom Drawer & Tabs**: Implement custom drawer and Tabs for app using React Navigation Drawer.
 - **Firebase Integration**: Integrate Firebase services for authentication, firestore, storage and other functionalities.
@@ -24,29 +24,35 @@ Kord Snap & Solve is a React Native Expo app that can easily solve mathematical 
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/awais2723/Kord-Snap-and-Solve.git
-    ```
+   ```bash
+   git clone https://github.com/awais2723/Kord-Snap-and-Solve.git
+   ```
 
 2. Navigate to the project directory:
 
-    ```bash
-    cd Kord-Snap-and-Solve
-    ```
+   ```bash
+   cd Kord-Snap-and-Solve
+   ```
 
 3. Install dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
+
+   or
+
+   ```bash
+   yarn install
+   ```
 
 ### Usage
 
 1. Start the development server:
 
-    ```bash
-    npx expo start
-    ```
+   ```bash
+   npx expo start
+   ```
 
 2. Open the Expo Go app on your mobile device.
 3. Scan the QR code displayed in the terminal to open the app.
@@ -58,7 +64,7 @@ Kord Snap & Solve is a React Native Expo app that can easily solve mathematical 
 - Firebase
 - Axios
 - Async Storage
-- React Native Navigation
+- Expo App Router
 - React Native Responsive Screen
 - React Native Camera
 - React Native Image Picker
