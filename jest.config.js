@@ -1,0 +1,26 @@
+module.exports = {
+  preset: 'jest-expo',
+  bail: 5,
+  clearMocks: true,
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
+  transformIgnorePatterns: [
+    'node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)',
+  ],
+  testPathIgnorePatterns: ['/node_modules/'],
+  testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
+  testEnvironment: 'node',
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    '**/*.{ts,tsx}',
+    '!**/coverage/**',
+    '!**/node_modules/**',
+    '!**/.expo/**',
+    '!**/*.config.js',
+    '!**/*.d.ts',
+  ],
+  coverageReporters: ['html'],
+  coveragePathIgnorePatterns: ['/node_modules/'],
+  setupFilesAfterEnv: ['@testing-library/jest-native', '@testing-library/jest-dom'],
+  verbose: true,
+};

@@ -1,19 +1,45 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "target": "ESNext",
+    "moduleResolution": "node",
     "strict": true,
+    "noEmit": true,
+    "noImplicitAny": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "types": [
+      "node",
+      "jest",
+      "expo-router/types/jest",
+      "@testing-library/jest-native",
+      "@testing-library/jest-dom"
+    ]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
+    "*.d.ts",
     "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "*.config.js",
+    ".eslintrc",
+    ".prettierrc"
   ]
 }

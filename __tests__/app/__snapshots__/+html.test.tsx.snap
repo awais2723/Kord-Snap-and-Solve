@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root Component renders correctly 1`] = `
+<html
+  lang="en"
+>
+  <head>
+    <meta
+      charSet="utf-8"
+    />
+    <meta
+      content="IE=edge"
+      httpEquiv="X-UA-Compatible"
+    />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
+    <title>
+      Kord Snap & Solve
+    </title>
+    <link
+      href="https://yourdomain.com"
+      rel="canonical"
+    />
+    <link
+      href="https://yourdomain.com/og-image.jpg"
+      rel="image_src"
+    />
+    <meta
+      content="Kord Snap & Solve"
+      name="title"
+    />
+    <meta
+      content="Kord Snap & Solve is a React Native Expo app that can easily solve mathematical questions in step by step, by uploading the image of the question to solve"
+      name="description"
+    />
+    <meta
+      content="index, follow"
+      name="robots"
+    />
+    <meta
+      content="the dev environment, yourdomain, developer, web, web developer, react, react-native, react native, expo"
+      name="keywords"
+    />
+    <meta
+      content="Kord Snap & Solve"
+      name="author"
+    />
+    <meta
+      content="Kord Snap & Solve"
+      name="publisher"
+    />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      name="viewport"
+    />
+    <meta
+      content="website"
+      property="og:type"
+    />
+    <meta
+      content="https://yourdomain.com"
+      property="og:url"
+    />
+    <meta
+      content="Kord Snap & Solve"
+      property="og:title"
+    />
+    <meta
+      content="Kord Snap & Solve is a React Native Expo app that can easily solve mathematical questions in step by step, by uploading the image of the question to solve"
+      property="og:description"
+    />
+    <meta
+      content="https://yourdomain.com/og-image.jpg"
+      property="og:image"
+    />
+    <meta
+      content="summary_large_image"
+      property="twitter:card"
+    />
+    <meta
+      content="https://yourdomain.com"
+      property="twitter:url"
+    />
+    <meta
+      content="Kord Snap & Solve"
+      property="twitter:title"
+    />
+    <meta
+      content="Kord Snap & Solve is a React Native Expo app that can easily solve mathematical questions in step by step, by uploading the image of the question to solve"
+      property="twitter:description"
+    />
+    <meta
+      content="https://yourdomain.com/og-image.jpg"
+      property="twitter:image"
+    />
+  </head>
+  <body />
+</html>
+`;

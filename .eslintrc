@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "extends": [
+    "universe/native",
+    "@react-native-community",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "jest"],
+  "rules": {
+    "semi": ["error", "always"],
+    "no-var": "error",
+    "no-console": "error",
+    "no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "react/jsx-uses-react": 1,
+    "arrow-body-style": ["error"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"]],
+        "newlines-between": "always"
+      }
+    ]
+  },
+  "env": {
+    "node": true,
+    "jest/globals": true
+  }
+}

@@ -1,20 +1,26 @@
-import React, { useEffect } from "react";
-import { Slot } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { useFonts } from "expo-font";
+/**
+ * The above code defines a RootLayout component in TypeScript React that handles font loading and
+ * SplashScreen management.
+ * @returns The `RootLayout` component is being returned. If the fonts are not loaded yet, it will
+ * return `null`. Otherwise, it will return the `Slot` component.
+ */
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { useFonts } from 'expo-font';
+import { Slot } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from 'react';
 
-export { ErrorBoundary } from "expo-router";
+export { ErrorBoundary } from 'expo-router';
 
 export const unstable_settings = {
-  initialRouteName: "index",
+  initialRouteName: 'index',
 };
 
 SplashScreen.preventAutoHideAsync();
 
-export default function RootLayout() {
+const RootLayout = () => {
   const [loaded, error] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
+    SpaceMono: require('@/src/assets/fonts/SpaceMono-Regular.ttf'),
     ...FontAwesome.font,
   });
 
@@ -33,4 +39,6 @@ export default function RootLayout() {
   }
 
   return <Slot />;
-}
+};
+
+export default RootLayout;

@@ -1,8 +1,8 @@
-import React from "react";
-import Home from "@/screens/Home";
+/**
+ * This code defines a functional component called HomePage that renders the HomeScreen component.
+ */
+import { HomeScreen } from '@/src/screens';
 
-type Props = {};
+const HomePage = () => <HomeScreen />;
 
-const Page: React.FC<Props> = (props: Props) => <Home />;
-
-export default Page;
+export default HomePage;

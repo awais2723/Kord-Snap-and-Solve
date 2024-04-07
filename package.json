@@ -1,18 +1,50 @@
 {
   "name": "kord-snap-and-solve",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "description": "Kord Snap & Solve is a React Native Expo app that can easily solve mathematical questions in step by step, by uploading the image of the question to solve",
+  "repository": "https://github.com/awais2723/Kord-Snap-and-Solve.git",
+  "author": "AreebGhani <areebghanidps@gmail.com>",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "start": "expo start",
     "start:clear": "expo start --clear",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll",
-    "ts:check": "tsc"
+    "upgrade": "echo Expo upgrading... &&  expo upgrade",
+    "build:android": "echo Android building... && npx eas-cli build -p android --profile preview --local",
+    "build:ios": "echo IOS building... && npx eas-cli build -p ios --profile preview --local",
+    "build:web": "echo Web building... && npx expo export --platform web -c --output-dir web-build",
+    "publish": "echo EAS publishing... && npx eas-cli update",
+    "public:web": "echo Firebase deploying... && npx firebase deploy --only hosting",
+    "prepare": "echo Husky preparing... && husky",
+    "format": "echo Prettier formatting... && prettier --write .",
+    "format:check": "echo Prettier checking... && prettier --check .",
+    "lint": "echo ESlint checking... &&  eslint .",
+    "lint:fix": "echo ESlint fixing... &&  eslint . --quiet --fix",
+    "test": "echo Jest testing... && jest -u",
+    "commit": "echo Git status... && git status && echo Git adding... && git add --all && echo Git commiting... && git-cz && echo Git pushing... && git push -u origin master",
+    "release": "echo Version Releasing... && standard-version",
+    "eject": "echo Expo ejecting... && expo eject"
   },
-  "jest": {
-    "preset": "jest-expo"
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "yarn format:check",
+      "yarn lint",
+      "yarn test"
+    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
@@ -51,12 +83,45 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/cz-commitlint": "^19.2.0",
+    "@commitlint/format": "^19.0.3",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
+    "@react-native-community/eslint-config": "^3.2.0",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.4.5",
+    "@types/expo": "^33.0.1",
+    "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
+    "@types/react-native": "^0.73.0",
+    "@types/react-test-renderer": "^18.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "autoprefixer": "^10.4.19",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-atom": "^4.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-universe": "^12.0.0",
+    "eslint-plugin-jest": "^28.2.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
+    "inquirer": "9",
     "jest": "^29.2.1",
     "jest-expo": "~50.0.4",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
     "react-test-renderer": "18.2.0",
+    "standard-version": "^9.5.0",
     "tailwindcss": "3.3.2",
-    "typescript": "^5.1.3"
-  },
-  "private": true
+    "ts-jest": "^29.1.2",
+    "typescript": "*",
+    "typescript-eslint": "^7.5.0"
+  }
 }
