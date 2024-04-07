@@ -79,7 +79,7 @@ Kord Snap & Solve is a React Native Expo app that can easily solve mathematical 
 
 10. publish: This script is used to publish your app updates using EAS CLI. You can run it using `npm run publish` or `yarn publish`.
 
-11. public:web: This script deploys your web app to Firebase hosting. You can run it using `npm run public:web` or `yarn public:web`.
+11. publish:web: This script deploys your web app to Firebase hosting. You can run it using `npm run publish:web` or `yarn publish:web`.
 
 12. prepare: This script is used for Husky, a tool for Git hooks. It prepares Husky for running pre-commit hooks. It doesn't need to be manually executed, but if you want to run it manually, you can use `npm run prepare` or `yarn prepare`.
 
