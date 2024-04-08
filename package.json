@@ -4,7 +4,7 @@
   "version": "1.1.0",
   "description": "Kord Snap & Solve is a React Native Expo app that can easily solve mathematical questions in step by step, by uploading the image of the question to solve",
   "repository": "https://github.com/awais2723/Kord-Snap-and-Solve.git",
-  "author": "AreebGhani <areebghanidps@gmail.com>",
+  "author": "AreebGhani <areebghanidps@gmail.com>, awais2723 <muhmmadawais3993@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
