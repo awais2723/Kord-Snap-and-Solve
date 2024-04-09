@@ -1,8 +1,9 @@
 /**
- * This code defines a functional component called HomePage that renders the HomeScreen component.
+ * The code defines a functional component `GetStartedPage` that renders the `GetStartedScreen`
+ * component.
  */
-import { HomeScreen } from '@/src/screens';
+import { GetStartedScreen } from '@/src/screens';
 
-const HomePage = () => <HomeScreen />;
+const GetStartedPage = () => <GetStartedScreen />;
 
-export default HomePage;
+export default GetStartedPage;

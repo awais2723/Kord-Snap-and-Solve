@@ -1,5 +1,5 @@
 /**
- * The above code defines a RootLayout component in TypeScript React that handles font loading and
+ * This code defines a RootLayout component in TypeScript React that handles font loading and
  * SplashScreen management.
  * @returns The `RootLayout` component is being returned. If the fonts are not loaded yet, it will
  * return `null`. Otherwise, it will return the `Slot` component.
@@ -8,7 +8,9 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useFonts } from 'expo-font';
 import { Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export { ErrorBoundary } from 'expo-router';
 
@@ -38,7 +40,12 @@ const RootLayout = () => {
     return null;
   }
 
-  return <Slot />;
+  return (
+    <SafeAreaProvider>
+      <StatusBar style="auto" animated={true} hideTransitionAnimation="fade" />
+      <Slot />
+    </SafeAreaProvider>
+  );
 };
 
 export default RootLayout;

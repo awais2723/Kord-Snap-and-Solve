@@ -16,3 +16,4 @@ web-build/
 src/assets/**
 *.json
 *.md
+*.d.ts
