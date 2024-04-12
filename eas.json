@@ -5,14 +5,66 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      },
+      "env": {
+        "APP_NAME": "Kord Snap & Solve"
+      }
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "image": "latest",
+        "simulator": true
+      },
+      "android": {
+        "image": "latest"
+      },
+      "env": {
+        "APP_NAME": "Kord Snap & Solve"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "android": {
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      },
+      "distribution": "internal",
+      "env": {
+        "APP_NAME": "Kord Snap & Solve"
+      }
     },
-    "production": {}
+    "production": {
+      "android": {
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      },
+      "env": {
+        "APP_NAME": "Kord Snap & Solve"
+      }
+    }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "../path/to/api-xxx-yyy-zzz.json",
+        "track": "internal"
+      },
+      "ios": {
+        "appleId": "john@turtle.com",
+        "ascAppId": "1234567890",
+        "appleTeamId": "AB12XYZ34S"
+      }
+    }
   }
 }

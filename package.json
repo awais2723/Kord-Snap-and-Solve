@@ -27,7 +27,7 @@
     "test": "echo Jest testing... && jest -o -u --passWithNoTests",
     "commit": "echo Git status... && git status && echo Git adding... && git add --all && echo Git commiting... && git-cz && echo Git pushing... && git push -u origin master",
     "release": "echo Version Releasing... && standard-version",
-    "eject": "echo Expo ejecting... && expo eject"
+    "eject": "echo WARNING: Ejecting from Expo will permanently change your project configuration and may not be reversible. Are you sure you want to proceed? (yes/no) && read -p 'Your answer: ' answer && [[ $answer == [yY]es ]] && echo Expo ejecting... && expo eject"
   },
   "config": {
     "commitizen": {
@@ -59,6 +59,7 @@
     "axios": "^1.6.8",
     "expo": "~50.0.14",
     "expo-constants": "^15.4.5",
+    "expo-dev-client": "^3.3.11",
     "expo-font": "^11.10.3",
     "expo-linking": "^6.2.2",
     "expo-router": "^3.4.8",
