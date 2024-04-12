@@ -39,7 +39,7 @@
   "exclude": [
     "node_modules",
     "*.config.js",
-    ".eslintrc",
+    "eslint.config.js",
     ".prettierrc"
   ]
 }
