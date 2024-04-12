@@ -9,3 +9,5 @@ assets/**
 .prettirrc
 .eslintrc
 tsconfig.json
+.github
+.husky

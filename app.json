@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.areebghani.kordsnapandsolve"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +32,14 @@
     "experiments": {
       "typedRoutes": true,
       "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "4f4bd047-31db-4354-8235-804ab0121ef3"
+      }
     }
   }
 }

@@ -17,3 +17,5 @@ src/assets/**
 *.json
 *.md
 *.d.ts
+.github
+.husky
