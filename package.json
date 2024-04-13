@@ -24,7 +24,7 @@
     "format:check": "echo Prettier checking... && prettier --check .",
     "lint": "echo ESlint checking... &&  eslint .",
     "lint:fix": "echo ESlint fixing... &&  eslint . --quiet --fix",
-    "test": "echo Jest testing... && jest -o -u --passWithNoTests",
+    "test": "echo Jest testing... && jest --coverage -o -u --passWithNoTests",
     "commit": "echo Git status... && git status && echo Git adding... && git add --all && echo Git commiting... && git-cz && echo Git pushing... && git push -u origin master",
     "release": "echo Version Releasing... && standard-version",
     "eject": "echo WARNING: Ejecting from Expo will permanently change your project configuration and may not be reversible. Are you sure you want to proceed? (yes/no) && read -p 'Your answer: ' answer && [[ $answer == [yY]es ]] && echo Expo ejecting... && expo eject"
@@ -80,7 +80,6 @@
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "0.73.6",
-    "react-native-dotenv": "^3.4.11",
     "react-native-gesture-handler": "~2.14.0",
     "react-native-paper": "^5.12.3",
     "react-native-reanimated": "~3.6.2",

@@ -2,6 +2,21 @@
 
 Kord Snap & Solve is a React Native Expo app that can easily solve mathematical questions in step by step, by uploading the image of the question to solve.
 
+## Introduction
+
+Expo is an open-source platform for making universal native apps that run on Android, iOS, and the web. It includes a universal runtime and libraries that let you build native apps by writing React and JavaScript.
+
+
+<br/>
+
+<!-- Banner Image -->
+<p align="center">
+  <a href="https://expo.dev/">
+     <img alt="expo sdk" height="128" src="https://raw.githubusercontent.com/expo/expo/main/.github/resources/banner.png">
+    <h1 align="center">Expo</h1>
+  </a>
+</p>
+
 ## Features
 
 - **Routing**: Easily navigate between screens using Expo App Router.

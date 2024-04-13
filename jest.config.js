@@ -19,7 +19,7 @@ module.exports = {
     '!**/*.config.js',
     '!**/*.d.ts',
   ],
-  coverageReporters: ['html'],
+  coverageReporters: ['json', 'html'],
   coveragePathIgnorePatterns: ['/node_modules/'],
   setupFilesAfterEnv: ['@testing-library/jest-native', '@testing-library/jest-dom'],
   verbose: true,

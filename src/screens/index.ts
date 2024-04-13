@@ -8,3 +8,4 @@ export { default as HomeScreen } from '@/src/screens/HomeScreen';
 export { default as ScanScreen } from '@/src/screens/ScanScreen';
 export { default as AccountScreen } from '@/src/screens/AccountScreen';
 export { default as SettingsScreen } from '@/src/screens/SettingsScreen';
+export { default as NotFoundScreen } from '@/src/screens/NotFoundScreen';

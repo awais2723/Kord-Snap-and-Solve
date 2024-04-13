@@ -11,3 +11,4 @@ assets/**
 tsconfig.json
 .github
 .husky
+*.md

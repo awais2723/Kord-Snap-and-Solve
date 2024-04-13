@@ -21,7 +21,7 @@
         "foregroundImage": "./src/assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.areebghani.kordsnapandsolve"
+      "package": "com.kordsnapandsolve.app"
     },
     "web": {
       "bundler": "metro",

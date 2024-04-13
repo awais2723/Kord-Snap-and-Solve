@@ -3,24 +3,24 @@ Here's a breakdown of what the code is doing: */
 import React from 'react';
 import { renderRouter, screen } from 'expo-router/testing-library';
 
-import HomePage from '@/app';
+import GetStartedPage from '@/app';
 
-// Mock Home component
-jest.mock('@/src/screens/HomeScreen', () => 'MockedHome');
+// Mock GetStarted component
+jest.mock('@/src/screens/GetStartedScreen', () => 'MockedGetStarted');
 
-describe('Home Page', () => {
+describe('GetStarted Page', () => {
   test('renders correctly', async () => {
-    const MockComponent = jest.fn(() => <HomePage />);
+    const MockComponent = jest.fn(() => <GetStartedPage />);
 
     renderRouter(
       {
-        home: MockComponent,
+        getStarted: MockComponent,
       },
       {
-        initialUrl: '/home',
+        initialUrl: '/',
       }
     );
 
-    expect(screen).toHavePathname('/home');
+    expect(screen).toHavePathname('/');
   });
 });
