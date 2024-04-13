@@ -28,7 +28,15 @@
       "output": "static",
       "favicon": "./src/assets/images/favicon.png"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      [
+        "react-native-document-scanner-plugin",
+        {
+          "cameraPermission": "$(PRODUCT_NAME) needs camera access to scan questions"
+        }
+      ]
+    ],
     "experiments": {
       "typedRoutes": true,
       "tsconfigPaths": true
