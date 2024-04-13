@@ -25,6 +25,7 @@ Expo is an open-source platform for making universal native apps that run on And
 - **Firebase Integration**: Integrate Firebase services for authentication, firestore, storage and other functionalities.
 - **REST API Integration**: Communicate with RESTful APIs to fetch or send data.
 - **User Authentication**: Implement user authentication features using Firebase Auth.
+- **Document Scanning**: Easily scan, edit and save documents.
 - **MathPix OCR API**: Implement OCR API for converting images to LATEX.
 - **CHATGPT**: Implement GPT-3.5 Turbo for solving LATEX to step by step mathematical solution.
 
@@ -123,9 +124,7 @@ Expo is an open-source platform for making universal native apps that run on And
 - Async Storage
 - Expo App Router
 - React Native Responsive Screen
-- React Native Camera
-- React Native Image Picker
-- React Native SVG
+- React Native Document Scanner Plugin
 - Redux Toolkit
 - React Hook Form
 - Zod Validator
