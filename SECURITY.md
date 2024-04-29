@@ -12,7 +12,7 @@ If you believe you've found a security issue in software that is maintained in t
 
 # How to Submit a Report
 
-To submit a vulnerability report, please contact us at <areebghanidps@gmail.com>, <muhmmadawais3993@gmail.com>. Your submission will be reviewed and validated by a member of our team.
+To submit a vulnerability report, please contact us at <areebghanidps@gmail.com>, <muhmmadawais3993@gmail.com>, <humairabbas923@gmail.com>. Your submission will be reviewed and validated by a member of our team.
 
 # Safe Harbor
 
