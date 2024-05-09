@@ -1,5 +1,3 @@
-/* Setting up a Firebase app using the Firebase SDK. Here's a breakdown of what
-each part is doing: */
 import { initializeApp } from 'firebase/app';
 
 const firebaseConfig = {
