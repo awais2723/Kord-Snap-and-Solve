@@ -8,7 +8,7 @@ import DocumentScanner from 'react-native-document-scanner-plugin';
 
 import { Card } from '@/src/components';
 
-const ScanScreen = () => {
+const AskMeScreen = () => {
   const [scannedImage, setScannedImage] = useState<string>('');
 
   const scanDocument = async () => {
@@ -59,4 +59,4 @@ const ScanScreen = () => {
   );
 };
 
-export default ScanScreen;
+export default AskMeScreen;
