@@ -4,6 +4,7 @@ import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SignupScreen = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,46 +17,46 @@ const SignupScreen = () => {
   };
 
   return (
-    <View className="bg-violet-700  flex-1 justify-around">
+    <View className=" flex-1 justify-around">
       <SafeAreaView className="flex">
         <View className="flex-row justify-center">
-          <Image className="w-35 h-40 mb-10" source={require('../assets/images/logo.jpeg')} />
+          <Image className="w-35 h-40 mb-10" source={require('../assets/images/logo.png')} />
         </View>
         <View className="px-8 pt-8">
           <View className="form space-y-2">
-            <Text className="text-white font-bold text-1xl ml-4">Name</Text>
+            <Text className="text-lg font-bold text-violet-700 leading-9">Name</Text>
             <TextInput
               placeholder="Enter Name"
-              value={email}
-              onChangeText={setEmail}
-              className="border-2 bg-gray-300 text-gray-700 border-gray-300 rounded-md px-4 py-2"
+              value={name}
+              onChangeText={setName}
+              className="border-2  border-violet-700 rounded-md px-4 py-2 "
             />
-            <Text className="text-white font-bold text-1xl ml-4">Email Address</Text>
+            <Text className="text-lg font-bold text-violet-700 leading-9">Email Address</Text>
             <TextInput
               placeholder="Enter Email"
               value={email}
               onChangeText={setEmail}
-              className="border-2 bg-gray-300 text-gray-700 border-gray-300 rounded-md px-4 py-2"
+              className="border-2 text-gray-700 border-violet-700 rounded-md px-4 py-2"
             />
-            <Text className="text-white font-bold text-1xl ml-4">Password</Text>
+            <Text className="text-lg font-bold text-violet-700 leading-9">Password</Text>
             <TextInput
               placeholder="Enter Password"
               value={password}
               onChangeText={setPassword}
               secureTextEntry={true}
-              className="border-2 bg-gray-300 text-gray-700 border-gray-300 rounded-md px-4 py-2 mb-12"
+              className="border-2 text-gray-700 border-violet-700 rounded-md px-4 py-2 mb-12"
             />
             <TouchableOpacity
-              className="border-2 bg-yellow-500 text-gray-700 border-gray-300 rounded-md mt-10 py-2"
+              className="border-2 bg-violet-700  border-gray-300 rounded-md mt-10 py-2"
               onPress={handleSignup}>
-              <Text className="text-center font-bold  text-xl ">Sign up</Text>
+              <Text className="text-center text-white font-bold  text-xl ">Sign up</Text>
             </TouchableOpacity>
           </View>
         </View>
-        <View className="flex-row justify-center mt-5">
-          <Text className="text-white font-bold text-xl">Have an account?</Text>
+        <View className="flex-row justify-center mt-10">
+          <Text className=" font-bold text-xl">Have an account?</Text>
           <TouchableOpacity className="  pl-2" onPress={handleLogin}>
-            <Text className="text-center text-yellow-500 font-bold  text-xl ">Login</Text>
+            <Text className="text-center text-violet-700 font-bold  text-xl ">Login</Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>

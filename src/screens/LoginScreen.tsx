@@ -27,35 +27,35 @@ const LoginScreen = () => {
     router.push('/signup');
   };
   return (
-    <View className="bg-violet-700  flex-1 justify-around">
+    <View className="#FFFFFF  flex-1 justify-around">
       <SafeAreaView className="flex">
         <View className="flex-row justify-center">
-          <Image className="w-35 h-40 mb-10" source={require('../assets/images/logo.jpeg')} />
+          <Image className="w-35 h-40 mb-10" source={require('../assets/images/logo.png')} />
         </View>
         <View className="px-8 pt-8">
           <View className="form space-y-2">
-            <Text className="text-white font-bold text-1xl ml-4">Email Address</Text>
+            <Text className="text-lg font-bold text-violet-700 leading-9">Email Address</Text>
             <TextInput
               placeholder="Enter Email"
               value={email}
               onChangeText={setEmail}
-              className="border-2 bg-gray-300 text-gray-700 border-gray-300 rounded-md px-4 py-2"
+              className="border-2 text-gray-700 border-violet-700 rounded-md px-4 py-2"
             />
-            <Text className="text-white font-bold text-1xl ml-4">Password</Text>
+            <Text className="text-lg font-bold text-violet-700 leading-9">Password</Text>
             <TextInput
               placeholder="Enter Password"
               value={password}
               onChangeText={setPassword}
               secureTextEntry={true}
-              className="border-2 bg-gray-300 text-gray-700 border-gray-300 rounded-md px-4 py-2"
+              className="border-2 text-gray-700 border-violet-700 rounded-md px-4 py-2 mb-4"
             />
-            <TouchableOpacity className="flex items-end mb-8">
-              <Text className="text-white font-bold text-xl">Forgot Password?</Text>
+            <TouchableOpacity className="flex items-end mb-12 ">
+              <Text className="text-violet-700 font-bold text-xl">Forgot Password?</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              className="border-2 bg-yellow-500 text-gray-700 border-gray-300 rounded-md px-4 py-2"
+              className="border-2 bg-violet-700 text-gray-700 border-gray-300 rounded-md px-4 py-2"
               onPress={handleLogin}>
-              <Text className="text-center font-bold  text-xl ">Login</Text>
+              <Text className="text-center font-bold text-white text-xl ">Login</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -68,9 +68,9 @@ const LoginScreen = () => {
           </TouchableOpacity>
         </View>
         <View className="flex-row justify-center mt-5">
-          <Text className="text-white font-bold text-xl"> Don&apos;t have an account?</Text>
+          <Text className=" font-bold text-xl"> Don&apos;t have an account?</Text>
           <TouchableOpacity className="  pl-2" onPress={handleSignup}>
-            <Text className="text-center text-yellow-500 font-bold  text-xl ">Signup</Text>
+            <Text className="text-center text-violet-700 font-bold  text-xl ">Signup</Text>
           </TouchableOpacity>
           {/* <Link
               href="/(auth)/signup"
