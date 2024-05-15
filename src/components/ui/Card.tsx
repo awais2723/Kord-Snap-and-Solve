@@ -9,7 +9,7 @@ type Props = {
 
 const Card: React.FC<Props> = ({ text }: Props) => (
   <View>
-    <Text className="text-red-500 text-[18px] px-4 text-center">{text}</Text>
+    <Text className=" text-white text-bold text-4xl text-center">{text}</Text>
   </View>
 );
 

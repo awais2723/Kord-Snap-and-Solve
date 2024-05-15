@@ -4,11 +4,12 @@ import { initializeApp } from 'firebase/app';
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGE_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
+  authDomain: 'knord-and-solve.firebaseapp.com',
+  projectId: 'knord-and-solve',
+  storageBucket: 'knord-and-solve.appspot.com',
+  messagingSenderId: '1084410555281',
+  appId: '1:1084410555281:web:38f2d4c7c643d24860c830',
+  measurementId: 'G-0Z2T7L85GC',
 };
 
 const app = initializeApp(firebaseConfig);
