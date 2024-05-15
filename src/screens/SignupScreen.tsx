@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { router } from 'expo-router';
-import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Image, TouchableOpacity, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'; // Import createUserWithEmailAndPassword from firebase/auth
+
+import { auth } from './firebase';
 
 const SignupScreen = () => {
   const [name, setName] = useState('');
@@ -12,8 +15,19 @@ const SignupScreen = () => {
     router.push('/login');
   };
   const handleSignup = async () => {
-    // console.log(email, password);
-    router.push('/signup');
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      console.log('User signed up:', user.uid);
+
+      await sendEmailVerification(user);
+
+      Alert.alert('Verification Email Sent', 'Please check your email to verify your account.');
+      router.push('/home');
+    } catch (error) {
+      console.error('Sign-up error:', error.message);
+      Alert.alert('Error', 'Failed to sign up. Please try again.');
+    }
   };
 
   return (

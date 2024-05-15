@@ -2,28 +2,27 @@ import React, { useState } from 'react';
 import { router } from 'expo-router';
 import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-//import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 
-//import { auth } from '../firebaseConfig';
+import { auth } from './firebase';
 
 // const navigation = useNavigation();
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleLogin = async () => {
-    router.push('/home');
-    // try {
-    //   const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    //   console.log('user data,', userCredential.user);
-    //   // Navigate to the next screen on successful login
-    // } catch (error) {
-    //   console.log('error in code');
-    // }
+  const signin = async () => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      console.log('User signed in:', user.uid);
+      router.push('/home');
+    } catch (error) {
+      console.error('Sign-in error:', error.message);
+      Alert.alert('Error', 'Failed to sign in. Please check your credentials.');
+    }
   };
   const handleSignup = async () => {
-    // console.log(email, password);
     router.push('/signup');
   };
   return (
@@ -54,7 +53,7 @@ const LoginScreen = () => {
             </TouchableOpacity>
             <TouchableOpacity
               className="border-2 bg-violet-700 text-gray-700 border-gray-300 rounded-md px-4 py-2"
-              onPress={handleLogin}>
+              onPress={signin}>
               <Text className="text-center font-bold text-white text-xl ">Login</Text>
             </TouchableOpacity>
           </View>

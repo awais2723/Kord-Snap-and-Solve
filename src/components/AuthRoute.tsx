@@ -12,13 +12,13 @@ const AuthRoute: React.FC<AuthRouteProps> = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = auth().onAuthStateChanged((user) => {
-        setLoading(false);
-        if (!user) {
-          console.log('User not authenticated, redirecting to login.');
-          navigation.navigate('LoginScreen');
-        }
-      });
+    const unsubscribe = auth().onAuthStateChanged(user => {
+      setLoading(false);
+      if (!user) {
+        console.log('User not authenticated, redirecting to login.');
+        navigation.navigate('LoginScreen');
+      }
+    });
     return () => unsubscribe();
   }, []);
 
