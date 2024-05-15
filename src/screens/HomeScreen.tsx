@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Image, Animated } from 'react-native';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { thinkingImage } from '@/assets/images/thinking.png';
+import thinkingImage from '../assets/images/thinking.png';
 
 const HomeScreen: React.FC = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -45,14 +45,14 @@ const HomeScreen: React.FC = () => {
 
   return (
     <View className="flex-1 bg-white">
-      <View className="h-[255px] bg-violet-700 shadow-2xl rounded-b-lg  flex-row pt-10 border-black">
-        <View className="bg-violet w-[180px]">
-          <Image source={thinkingImage} className="w-full h-[300px]" />
+      <View className="h-[260px] bg-primary shadow-2xl rounded-b-lg  flex-row pt-10 border-black">
+        <View className="bg-primary w-[180px]">
+          <Image source={thinkingImage} className="w-full h-[310px]" />
         </View>
-        <View className="bg-violet-700 flex-1 items-center">
+        <View className="bg-primary flex-1 items-center">
           <Text className="mt-10 text-white font-bold text-xl">What You want to Solve?</Text>
 
-          <View className="bg-violet-700  w-50 h-18 mt-2 ">
+          <View className="bg-primary  w-50 h-18 mt-2 ">
             {/* <Animated.Text
             style={{
               marginTop: 10,
@@ -79,7 +79,7 @@ const HomeScreen: React.FC = () => {
       </View>
 
       <View className="bg-sky-50 flex-1 items-center pt-5">
-        <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-10 justify-center items-center">
+        <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-12 justify-center items-center">
           <MaterialCommunityIcons
             name="text-recognition"
             size={50}

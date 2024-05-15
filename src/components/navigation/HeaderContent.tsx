@@ -7,7 +7,7 @@ const HeaderContent = () => {
   const navigation = useNavigation();
 
   return (
-    <View className="bg-violet-700 flex flex-row justify-between items-center pt-10 pb-2 px-3 ">
+    <View className="bg-primary flex flex-row justify-between items-center pt-10 pb-2 px-3 ">
       <TouchableOpacity
         onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
         className="m-2">
