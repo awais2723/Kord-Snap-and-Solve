@@ -1,9 +1,9 @@
-import { HeaderContent } from '@/src/components';
+// import { HeaderContent } from '@/src/components';
 import { HomeScreen } from '@/src/screens';
 
 const HomePage = () => (
   <>
-    <HeaderContent />
+    {/* <HeaderContent /> */}
     <HomeScreen />
   </>
 );

@@ -7,20 +7,16 @@ const HeaderContent = () => {
   const navigation = useNavigation();
 
   return (
-    <View className="bg-gray-800 flex flex-row justify-between items-center pt-10 pb-2 px-3">
+    <View className="bg-primary flex flex-row justify-between items-center pt-10 pb-2 px-3 ">
       <TouchableOpacity
         onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
         className="m-2">
         <FontAwesome name="bars" color="white" size={18} />
       </TouchableOpacity>
       <View className="flex flex-col justify-center items-center">
-        <Text className="text-[16px] font-medium text-white text-center">Kord Snap & Solve</Text>
-        <Text className="text-[10px] font-bold text-white text-center">Hello World</Text>
+        <Text className="text-[18px] font-medium text-white text-center">Kord Snap & Solve</Text>
       </View>
-      <Image
-        className="rounded-full w-10 h-10"
-        source={require('@/src/assets/images/favicon.png')}
-      />
+      <Image className="rounded-full w-10 h-10" source={require('@/src/assets/images/logo.jpeg')} />
     </View>
   );
 };
