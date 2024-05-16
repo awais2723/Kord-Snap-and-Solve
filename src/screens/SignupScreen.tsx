@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { router } from 'expo-router';
 import { View, Text, TextInput, Image, TouchableOpacity, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'; // Import createUserWithEmailAndPassword from firebase/auth
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 
 import { auth } from './firebase';
 
