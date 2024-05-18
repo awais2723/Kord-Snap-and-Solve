@@ -35,7 +35,16 @@
         {
           "cameraPermission": "$(PRODUCT_NAME) needs camera access to scan questions"
         }
-      ]
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
