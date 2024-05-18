@@ -8,8 +8,8 @@ const DrawerContent = () => {
   const router = useRouter();
 
   return (
-    <View className="flex-1 bg-gray-800">
-      <DrawerContentScrollView scrollEnabled={false} className="bg-gray-800">
+    <View className="flex-1 bg-background">
+      <DrawerContentScrollView scrollEnabled={false} className="bg-background">
         <View className="mt-8 mb-16 p-4 flex flex-col justify-center items-center">
           <Image className="w-16 h-16" source={require('@/src/assets/images/favicon.png')} />
         </View>

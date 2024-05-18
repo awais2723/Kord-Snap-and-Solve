@@ -1,5 +1,5 @@
-import { HeaderContent } from '@/src/components';
 import { HomeScreen } from '@/src/screens';
+import { HeaderContent } from '@/src/components';
 
 const HomePage = () => (
   <>

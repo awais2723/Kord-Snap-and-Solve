@@ -24,7 +24,7 @@
     "types": [
       "node",
       "jest",
-      "expo-router/types/jest",
+      "expo-router/types",
       "@testing-library/jest-native",
       "@testing-library/jest-dom"
     ]

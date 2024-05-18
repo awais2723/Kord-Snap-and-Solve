@@ -20,3 +20,4 @@ src/assets/**
 .github
 .husky
 LICENSE
+server/**
