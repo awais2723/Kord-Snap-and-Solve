@@ -11,3 +11,4 @@ export { default as SettingsScreen } from '@/src/screens/SettingsScreen';
 export { default as NotFoundScreen } from '@/src/screens/NotFoundScreen';
 export { default as HistoryScreen } from '@/src/screens/HistoryScreen';
 export { default as MyProfileScreen } from '@/src/screens/MyProfileScreen';
+export { default as ScanQuestionScreen } from '@/src/screens/ScanQuestionScreen';

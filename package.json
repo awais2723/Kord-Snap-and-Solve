@@ -5,7 +5,7 @@
   "description": "Kord Snap & Solve is a React Native Expo app that can easily solve mathematical questions in step by step, by uploading the image of the question to solve",
   "repository": "https://github.com/awais2723/Kord-Snap-and-Solve.git",
   "author": "AreebGhani <areebghanidps@gmail.com>, awais2723 <muhmmadawais3993@gmail.com>, HumairAbbasKhan <humairabbas923@gmail.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "private": false,
   "scripts": {
     "start": "expo start",
@@ -14,6 +14,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "upgrade": "echo Expo upgrading... &&  expo upgrade",
+    "fix": "echo Expo fixing... && expo install --fix",
     "build:android": "echo Android building... && npx eas-cli build -p android --profile preview --local",
     "build:ios": "echo IOS building... && npx eas-cli build -p ios --profile preview --local",
     "build:web": "echo Web building... && npx expo export --platform web -c --output-dir web-build",
@@ -47,9 +48,9 @@
     ]
   },
   "dependencies": {
-    "@expo/vector-icons": "^14.0.2",
+    "@expo/vector-icons": "^14.0.0",
     "@expo/webpack-config": "^19.0.1",
-    "@react-native-async-storage/async-storage": "1.21.0",
+    "@react-native-async-storage/async-storage": "1.23.1",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/drawer": "^6.6.15",
     "@react-navigation/material-bottom-tabs": "^6.2.28",
@@ -58,6 +59,7 @@
     "@react-navigation/stack": "^6.3.29",
     "axios": "^1.6.8",
     "expo": "^50.0.15",
+    "expo-build-properties": "^0.12.1",
     "expo-constants": "^15.4.5",
     "expo-dev-client": "^3.3.11",
     "expo-font": "^11.10.3",
@@ -68,10 +70,10 @@
     "expo-system-ui": "^2.9.3",
     "expo-web-browser": "^12.8.2",
     "firebase": "10.11.0",
+    "mime": "^4.0.3",
     "nativewind": "^2.0.11",
-    "openai": "^4.47.1",
     "react": "18.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "18.2.0",
     "react-native": "0.73.6",
     "react-native-document-scanner-plugin": "^1.0.0",
     "react-native-gesture-handler": "~2.14.0",
@@ -125,7 +127,7 @@
     "standard-version": "^9.5.0",
     "tailwindcss": "3.3.2",
     "ts-jest": "^29.1.2",
-    "typescript": "*",
+    "typescript": "~5.3.3",
     "typescript-eslint": "^7.6.0"
   }
 }

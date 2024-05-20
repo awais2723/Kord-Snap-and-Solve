@@ -12,3 +12,4 @@ tsconfig.json
 .github
 .husky
 *.md
+server/**

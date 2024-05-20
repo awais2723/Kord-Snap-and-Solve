@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Image, Animated } from 'react-native';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { router } from 'expo-router';
 
-import thinkingImage from '../assets/images/thinking.png';
+import thinkingImage from '@/src/assets/images/thinking.png';
 
 const HomeScreen: React.FC = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -47,7 +49,7 @@ const HomeScreen: React.FC = () => {
     <View className="flex-1 bg-white">
       <View className="h-[260px] bg-primary shadow-2xl rounded-b-lg  flex-row pt-10 border-black">
         <View className="bg-primary w-[180px]">
-          <Image source={thinkingImage} className="w-full h-[310px]" />
+          <Image src={thinkingImage} className="w-full h-[310px]" />
         </View>
         <View className="bg-primary flex-1 items-center">
           <Text className="mt-10 text-white font-bold text-xl">What You want to Solve?</Text>
@@ -79,19 +81,21 @@ const HomeScreen: React.FC = () => {
       </View>
 
       <View className="bg-sky-50 flex-1 items-center pt-5">
-        <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-12 justify-center items-center">
-          <MaterialCommunityIcons
-            name="text-recognition"
-            size={50}
-            color="#6844EE"
-            // style={{ marginRight: 35 }}
-          />
+        <TouchableOpacity onPress={() => router.push('/ScanQuestion')}>
+          <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-12 justify-center items-center">
+            <MaterialCommunityIcons
+              name="text-recognition"
+              size={50}
+              color="#6844EE"
+              // style={{ marginRight: 35 }}
+            />
 
-          <Text className="text-center text-3xl text-gray-900 font-bold ml-[35px]">
-            Scan Question
-          </Text>
-          <MaterialIcons name="navigate-next" size={60} color="#6844EE" />
-        </View>
+            <Text className="text-center text-3xl text-gray-900 font-bold ml-[35px]">
+              Scan Question
+            </Text>
+            <MaterialIcons name="navigate-next" size={60} color="#6844EE" />
+          </View>
+        </TouchableOpacity>
 
         <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-10 justify-center items-center">
           <View className=" w-10 h-[70px] mr-10 justify-center items-center">
