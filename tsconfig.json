@@ -35,7 +35,7 @@
     ".expo/types/**/*.ts",
     "*.d.ts",
     "expo-env.d.ts"
-  ],
+, "src/styles/index.js"  ],
   "exclude": [
     "node_modules",
     "*.config.js",

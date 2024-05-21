@@ -35,7 +35,7 @@ const TabLayout = () => (
       },
     }}>
     <Tabs.Screen
-      name="home"
+      name="(stack)"
       options={{
         tabBarLabel: 'Home',
         tabBarIcon: HomeIcon,
@@ -53,7 +53,7 @@ const TabLayout = () => (
       }}
     />
     <Tabs.Screen
-      name="askMe"
+      name="(stack2)"
       options={{
         tabBarLabel: 'Ask Me',
         tabBarIcon: tutor,

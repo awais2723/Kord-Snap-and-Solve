@@ -4,7 +4,7 @@ import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { router } from 'expo-router';
 
-import thinkingImage from '@/src/assets/images/thinking.png';
+import { styles } from '@/src/styles';
 
 const HomeScreen: React.FC = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -47,9 +47,11 @@ const HomeScreen: React.FC = () => {
 
   return (
     <View className="flex-1 bg-white">
-      <View className="h-[260px] bg-primary shadow-2xl rounded-b-lg  flex-row pt-10 border-black">
+      <View
+        style={styles.shadow}
+        className="h-[260px] bg-primary rounded-b-lg  flex-row pt-10 border-black">
         <View className="bg-primary w-[180px]">
-          <Image src={thinkingImage} className="w-full h-[310px]" />
+          <Image source={require('../assets/images/thinking.png')} className="w-full h-[310px]" />
         </View>
         <View className="bg-primary flex-1 items-center">
           <Text className="mt-10 text-white font-bold text-xl">What You want to Solve?</Text>
@@ -82,7 +84,9 @@ const HomeScreen: React.FC = () => {
 
       <View className="bg-sky-50 flex-1 items-center pt-5">
         <TouchableOpacity onPress={() => router.push('/ScanQuestion')}>
-          <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-12 justify-center items-center">
+          <View
+            style={styles.shadow}
+            className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row mt-12 justify-center items-center">
             <MaterialCommunityIcons
               name="text-recognition"
               size={50}
@@ -97,8 +101,12 @@ const HomeScreen: React.FC = () => {
           </View>
         </TouchableOpacity>
 
-        <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-10 justify-center items-center">
-          <View className=" w-10 h-[70px] mr-10 justify-center items-center">
+        <View
+          style={styles.shadow}
+          className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row mt-10 justify-center items-center">
+          <View
+            // style={styles.shadow}
+            className=" w-10 h-[70px] mr-10 justify-center items-center border-red-900">
             <MaterialCommunityIcons name="math-integral" size={50} color="#6844EE" />
 
             {/* <View className=" bg-black-700 w-20 h-[70px]  justify-center items-center">
@@ -110,7 +118,9 @@ const HomeScreen: React.FC = () => {
           <MaterialIcons name="navigate-next" size={60} color="#6844EE" />
         </View>
 
-        <View className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-10 justify-center items-center">
+        <View
+          style={styles.shadow}
+          className="w-[380px] h-[70px] bg-white rounded-[16px] flex-row  drop-shadow-xl mt-10 justify-center items-center">
           <MaterialCommunityIcons name="math-norm-box" size={50} color="#6844EE" />
 
           <Text className="text-center text-3xl text-gray-900 font-bold ml-[35px] ">
