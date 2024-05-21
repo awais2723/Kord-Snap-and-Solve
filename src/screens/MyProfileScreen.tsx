@@ -1,29 +1,31 @@
 import { View, TouchableOpacity, Image, Text } from 'react-native';
 
-import profile from '../assets/images/profilePlaceholder.jpg';
-import gem from '../assets/images/gem.png';
-import premium from '../assets/images/premiumPicture.jpg';
+import { styles } from '../styles';
 
 const MyProfileScreen = () => (
-  <View className="bg-sky-50 flex flex-col flex-1 ">
-    <View className=" w-full h-[90px]  p-2 flex-row ">
+  <View className="bg-sky-50 flex flex-col flex-1 pt-10">
+    <View className="w-full h-20 p-2 flex-row items-center">
       <TouchableOpacity>
-        <Image source={profile} className="w-[70px] h-[70px] rounded-full" />
+        <Image
+          source={require('../assets/images/profilePlaceholder.jpg')}
+          className="w-14 h-14 rounded-full"
+        />
       </TouchableOpacity>
-      <Text className="text-black font-bold text-2xl ml-[25px] mt-[15px]">Awais</Text>
-      <View className=" w-[95px] h-[50] rounded-md ml-[130]  mt-2 p-[2]  flex-row  justify-center items-center border-2  border-primary">
-        <Text className="text-black font-bold text-2xl mr-[10] ">10</Text>
-        <Image source={gem} className="w-[30px] h-[30px] rounded-full" />
+      <Text className="text-black font-bold text-xl ml-4">Awais</Text>
+      <View className=" w-18 ml-auto mr-2 flex-row items-center border-2 border-primary rounded-md p-1">
+        <Text className="text-black font-bold text-lg mr-2">10</Text>
+        <Image source={require('../assets/images/gem.png')} className="w-6 h-6" />
       </View>
     </View>
 
-    <View className="flex-1 ">
-      <View className=" justify-center items-center  w-full h-[240px]">
+    <View className="flex-1 items-center">
+      <View style={styles.shadow} className="w-11/12 h-48 mt-5">
         <Image
-          source={premium}
-          className="w-[370px] h-[230px] rounded-2xl drop-shadow-2xl mt-5"></Image>
-        <TouchableOpacity className=" bg-yellow-300 absolute bottom-5 w-[200px] h-[40] rounded-2xl justify-center items-center">
-          <Text className="text-black font-bold text-xl">Upgrade to Premium</Text>
+          source={require('../assets/images/premiumPicture.jpg')}
+          className="w-full h-full rounded-2xl shadow-2xl"
+        />
+        <TouchableOpacity className="bg-yellow-300 absolute bottom-3 w-48 h-8 rounded-2xl justify-center items-center self-center">
+          <Text className="text-black font-bold text-lg">Upgrade to Premium</Text>
         </TouchableOpacity>
       </View>
     </View>

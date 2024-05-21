@@ -9,18 +9,18 @@ type TabBarIcon = {
 };
 
 const HomeIcon = ({ focused, color, size }: TabBarIcon) => (
-  <FontAwesome size={focused ? size + 15 : size + 8} name="home" color={color} />
+  <FontAwesome size={focused ? size + 8 : size + 4} name="home" color={color} />
 );
 
 const historyIcon = ({ focused, color, size }: TabBarIcon) => (
-  <MaterialIcons size={focused ? size + 10 : size + 8} name="history" color={color} />
+  <MaterialIcons size={focused ? size + 8 : size + 4} name="history" color={color} />
 );
 
 const MeIcon = ({ focused, color, size }: TabBarIcon) => (
-  <AntDesign size={focused ? size + 7 : size} name="meh" color={color} />
+  <AntDesign size={focused ? size + 2 : size} name="meh" color={color} />
 );
 const tutor = ({ focused, color, size }: TabBarIcon) => (
-  <Ionicons size={focused ? size + 7 : size} name="chatbox" color={color} />
+  <Ionicons size={focused ? size + 6 : size} name="chatbox" color={color} />
 );
 
 const TabLayout = () => (
@@ -29,7 +29,7 @@ const TabLayout = () => (
       headerShown: false,
       tabBarActiveTintColor: '#6844EE',
       tabBarLabelStyle: {
-        fontSize: 15,
+        fontSize: 12,
         fontWeight: 'bold',
         marginBottom: 3,
       },
