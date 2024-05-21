@@ -24,7 +24,7 @@
     "types": [
       "node",
       "jest",
-      "expo-router/types/jest",
+      "expo-router/types",
       "@testing-library/jest-native",
       "@testing-library/jest-dom"
     ]
@@ -35,7 +35,7 @@
     ".expo/types/**/*.ts",
     "*.d.ts",
     "expo-env.d.ts"
-  ],
+, "src/styles/index.js"  ],
   "exclude": [
     "node_modules",
     "*.config.js",
