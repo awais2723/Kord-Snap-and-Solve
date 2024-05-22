@@ -16,7 +16,10 @@ const HeaderContent = () => {
       <View className="flex flex-col justify-center items-center">
         <Text className="text-[18px] font-medium text-white text-center">Kord Snap & Solve</Text>
       </View>
-      <Image className="rounded-full w-10 h-10" source={require('@/src/assets/images/logo.jpeg')} />
+      <Image
+        className="rounded-full w-10 h-10"
+        source={require('@/src/assets/images/big_logo.jpeg')}
+      />
     </View>
   );
 };
