@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
@@ -18,6 +18,12 @@ const LatexEditor = () => {
   // const clearMathField = () => {
   //   webviewRef.current?.postMessage(JSON.stringify({ type: 'clearLatex' }));
   // };
+
+  useEffect(() => {
+    if (webviewRef && webviewRef.current) {
+      webviewRef.current.requestFocus();
+    }
+  }, []);
 
   return (
     <View className="w-screen h-[90%]">
