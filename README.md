@@ -130,6 +130,9 @@ Expo is an open-source platform for making universal native apps that run on And
 - Zod Validator
 - Jest Testing
 
+### Python Server
+https://github.com/awais2723/Kord-Snap-and-Solve/assets/91328326/5f900e95-3a59-450a-9dbb-3af4efb634b4
+
 ### Contributing
 
 Contributions are welcome! If you have suggestions or found bugs, please open an issue or create a pull request.
