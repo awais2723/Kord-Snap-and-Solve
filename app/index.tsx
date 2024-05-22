@@ -1,9 +1,27 @@
 /**
- * The code defines a functional component `GetStartedPage` that renders the `GetStartedScreen`
+ * The code defines a functional component `SplashPage` that renders the `SplashScreen`
  * component.
  */
-import { GetStartedScreen } from '@/src/screens';
+import { useEffect } from 'react';
+import { router } from 'expo-router';
 
-const GetStartedPage = () => <GetStartedScreen />;
+import { SplashScreen } from '@/src/screens';
+import { useAuth } from '@/context';
 
-export default GetStartedPage;
+const SplashPage = () => {
+  const { loading, userLoggedIn } = useAuth();
+
+  useEffect(() => {
+    if (!loading) {
+      if (userLoggedIn) {
+        router.replace('/home');
+      } else {
+        router.replace('/login');
+      }
+    }
+  }, [loading, userLoggedIn]);
+
+  return <SplashScreen />;
+};
+
+export default SplashPage;

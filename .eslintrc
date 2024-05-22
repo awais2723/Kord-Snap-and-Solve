@@ -39,7 +39,8 @@
         "groups": [["builtin", "external"]],
         "newlines-between": "always"
       }
-    ]
+    ],
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "env": {
     "node": true,

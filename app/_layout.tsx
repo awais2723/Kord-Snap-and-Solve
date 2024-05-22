@@ -12,6 +12,8 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { FirebaseProvider, AuthProvider } from '@/context';
+
 export { ErrorBoundary } from 'expo-router';
 
 export const unstable_settings = {
@@ -42,8 +44,12 @@ const RootLayout = () => {
 
   return (
     <SafeAreaProvider>
-      <StatusBar style="auto" animated={true} hideTransitionAnimation="fade" />
-      <Slot />
+      <StatusBar style="dark" animated={true} hideTransitionAnimation="fade" />
+      <FirebaseProvider>
+        <AuthProvider>
+          <Slot />
+        </AuthProvider>
+      </FirebaseProvider>
     </SafeAreaProvider>
   );
 };

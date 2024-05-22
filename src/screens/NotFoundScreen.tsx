@@ -1,7 +1,9 @@
 import { Link } from 'expo-router';
 import { Text, View } from 'react-native';
 
-const NotFoundScreen = () => (
+type Props = object;
+
+const NotFoundScreen: React.FC<Props> = (_props: Props) => (
   <View className="flex justify-center items-center pt-8">
     <Text className="text-xl text-white">This screen doesn&apos;t exist.</Text>
     <Link href="/" replace className="mt-10 py-4">

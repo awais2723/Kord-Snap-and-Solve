@@ -11,7 +11,9 @@ import mime from 'mime';
 import { Card } from '@/src/components';
 import { SERVER_END_POINT } from '@/constants';
 
-const ScanQuestionScreen = () => {
+type Props = object;
+
+const ScanQuestionScreen: React.FC<Props> = (_props: Props) => {
   const [scannedImage, setScannedImage] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -77,6 +79,7 @@ const ScanQuestionScreen = () => {
   useEffect(() => {
     // call scanDocument on load
     scanDocument();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (scannedImage) {
@@ -89,7 +92,7 @@ const ScanQuestionScreen = () => {
   }
 
   return (
-    <View className="bg-gray-900 flex flex-col flex-1 justify-center items-center">
+    <View className="bg-gray-100 flex flex-col flex-1 justify-center items-center">
       <Card text="Scan Screen" />
       <View className="my-10" />
     </View>
