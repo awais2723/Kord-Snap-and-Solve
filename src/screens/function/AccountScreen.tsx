@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 
 import { useAuth } from '@/context';
-import { Card } from '@/src/components';
+import { Card } from '@/src/components/function';
 
 type Props = object;
 

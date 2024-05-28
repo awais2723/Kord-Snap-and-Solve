@@ -1,4 +1,4 @@
-import { TypeEquationScreen } from '@/src/screens';
+import { TypeEquationScreen } from '@/src/screens/function';
 
 const TypeEquationPage = () => <TypeEquationScreen />;
 

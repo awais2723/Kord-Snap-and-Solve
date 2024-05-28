@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 
-import { Card } from '@/src/components';
+import { Card } from '@/src/components/function';
 
 type Props = object;
 

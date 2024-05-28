@@ -10,16 +10,11 @@
     "esModuleInterop": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
+    "lib": ["DOM", "ESNext"],
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
+      "@/*": ["./*"],
       "@firebase/auth": ["./node_modules/@firebase/auth/dist/index.rn.d.ts"]
     },
     "types": [
@@ -30,17 +25,6 @@
       "@testing-library/jest-dom"
     ]
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "*.d.ts",
-    "expo-env.d.ts"
-, "src/styles/index.js"  ],
-  "exclude": [
-    "node_modules",
-    "*.config.js",
-    "eslint.config.js",
-    ".prettierrc"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "*.d.ts", "expo-env.d.ts"],
+  "exclude": ["node_modules", "*.config.js", "eslint.config.js", ".prettierrc"]
 }

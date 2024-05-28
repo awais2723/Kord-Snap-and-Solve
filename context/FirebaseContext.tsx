@@ -11,13 +11,13 @@ type DataType = {
   name: string;
 };
 
-type ContextType = {
+export type FirebaseContextType = {
   data: DataType[];
   fetchData: () => Promise<void>;
   loading: boolean;
 };
 
-const FirebaseContext = createContext<ContextType>({
+export const FirebaseContext = createContext<FirebaseContextType>({
   data: [],
   fetchData: async () => {},
   loading: false,
@@ -46,7 +46,7 @@ const FirebaseProvider: React.FC<Props> = ({ children }: Props) => {
     fetchData();
   }, []);
 
-  const values: ContextType = {
+  const values: FirebaseContextType = {
     data,
     fetchData,
     loading,

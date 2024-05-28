@@ -4,6 +4,7 @@ module.exports = function (api) {
     presets: ['babel-preset-expo'],
     plugins: [
       'nativewind/babel',
+      ['@babel/plugin-transform-flow-strip-types', { allowDeclareFields: true }],
       [
         'module:react-native-dotenv',
         {

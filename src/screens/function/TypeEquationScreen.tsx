@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 
-import { LatexEditor } from '@/src/components';
+import { LatexEditor } from '@/src/components/function';
 
 type Props = object;
 

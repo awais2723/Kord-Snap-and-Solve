@@ -57,7 +57,7 @@ const HomeScreen: React.FC<Props> = (_props: Props) => {
       <View
         style={styles.shadow}
         className=" w-full h-64 bg-primary rounded-b-xl flex-row pt-4 border-2">
-        <Image source={require('../assets/images/thinking.png')} className="w-5/12 h-80 mt-5 " />
+        <Image source={require('../../assets/images/thinking.png')} className="w-5/12 h-80 mt-5 " />
         <View className="bg-primary w-7/12 items-center rounded-b-xl pt-10">
           <Text className=" text-white font-bold text-2xl max-w-full">What You want to Solve?</Text>
           <View className="bg-primary w-50 h-18 mt-2">

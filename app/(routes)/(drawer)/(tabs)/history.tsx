@@ -1,5 +1,5 @@
-import { HeaderContent } from '@/src/components';
-import { HistoryScreen } from '@/src/screens';
+import { HeaderContent } from '@/src/components/function';
+import { HistoryScreen } from '@/src/screens/function';
 
 const HistoryPage = () => (
   <>

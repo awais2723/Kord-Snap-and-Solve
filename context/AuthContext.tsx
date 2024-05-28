@@ -9,14 +9,14 @@ import { onAuthStateChanged, User } from 'node_modules/firebase/auth';
 
 import { auth } from '@/firebase/config';
 
-type ContextType = {
+export type AuthContextType = {
   currentUser: User | null;
   userLoggedIn: boolean;
   loading: boolean;
   resetAuth: () => void;
 };
 
-const AuthContext = createContext<ContextType | undefined>(undefined);
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -58,7 +58,7 @@ const AuthProvider: React.FC<Props> = ({ children }: Props) => {
     setCurrentUser(null);
   };
 
-  const value: ContextType = {
+  const value: AuthContextType = {
     loading,
     userLoggedIn,
     currentUser,

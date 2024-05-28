@@ -13,7 +13,7 @@ const MyProfileScreen: React.FC<Props> = (_props: Props) => {
       <View className="w-full h-20 p-2 flex-row items-center">
         <TouchableOpacity>
           <Image
-            source={require('../assets/images/profilePlaceholder.jpg')}
+            source={require('../../assets/images/profilePlaceholder.jpg')}
             className="w-14 h-14 rounded-full"
           />
         </TouchableOpacity>
@@ -22,14 +22,14 @@ const MyProfileScreen: React.FC<Props> = (_props: Props) => {
         </Text>
         <View className=" w-18 ml-auto mr-2 flex-row items-center border-2 border-primary rounded-md p-1">
           <Text className="text-black font-bold text-lg mr-2">10</Text>
-          <Image source={require('../assets/images/gem.png')} className="w-6 h-6" />
+          <Image source={require('../../assets/images/gem.png')} className="w-6 h-6" />
         </View>
       </View>
 
       <View className="flex-1 items-center">
         <View style={styles.shadow} className="w-11/12 h-48 mt-5">
           <Image
-            source={require('../assets/images/premiumPicture.jpg')}
+            source={require('../../assets/images/premiumPicture.jpg')}
             className="w-full h-full rounded-2xl shadow-2xl"
           />
           <TouchableOpacity className="bg-yellow-300 absolute bottom-3 w-48 h-8 rounded-2xl justify-center items-center self-center">

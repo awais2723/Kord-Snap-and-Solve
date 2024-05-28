@@ -5,7 +5,7 @@
 import { useEffect } from 'react';
 import { router } from 'expo-router';
 
-import { SplashScreen } from '@/src/screens';
+import { SplashScreen } from '@/src/screens/function';
 import { useAuth } from '@/context';
 
 const SplashPage = () => {
