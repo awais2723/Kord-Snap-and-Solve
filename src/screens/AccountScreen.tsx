@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { View } from 'react-native';
 
 import { AuthContext, AuthContextType } from '@/context';
-import { Card } from '@/src/components/function';
+import { Card } from '@/src/components';
 
 type Props = object;
 type State = object;

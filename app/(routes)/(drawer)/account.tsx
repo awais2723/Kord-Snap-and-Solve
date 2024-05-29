@@ -1,5 +1,5 @@
-import { HeaderContent } from '@/src/components/function';
-import { AccountScreen } from '@/src/screens/function';
+import { HeaderContent } from '@/src/components';
+import { AccountScreen } from '@/src/screens';
 
 const AccountPage = () => (
   <>

@@ -18,7 +18,7 @@ const HeaderContent = () => {
       </View>
       <Image
         className="rounded-full w-10 h-10"
-        source={require('../../../assets/images/big_logo.jpeg')}
+        source={require('../../assets/images/big_logo.jpeg')}
       />
     </View>
   );

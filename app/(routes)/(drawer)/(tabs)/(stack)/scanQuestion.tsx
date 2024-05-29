@@ -1,4 +1,4 @@
-import { ScanQuestionScreen } from '@/src/screens/function';
+import { ScanQuestionScreen } from '@/src/screens';
 
 const ScanQuestionPage = () => <ScanQuestionScreen />;
 

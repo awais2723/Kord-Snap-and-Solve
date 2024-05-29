@@ -1,5 +1,5 @@
-import { HeaderContent } from '@/src/components/function';
-import { SettingsScreen } from '@/src/screens/class';
+import { HeaderContent } from '@/src/components';
+import { SettingsScreen } from '@/src/screens';
 
 const SettingsPage = () => (
   <>

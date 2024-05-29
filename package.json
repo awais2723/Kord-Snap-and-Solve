@@ -64,6 +64,7 @@
     "expo-dev-client": "^3.3.11",
     "expo-font": "^11.10.3",
     "expo-linking": "^6.2.2",
+    "expo-network": "^6.0.1",
     "expo-router": "^3.4.8",
     "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "^1.11.1",

@@ -67,7 +67,7 @@ class SignupScreen extends Component<Props, State> {
       <View className=" flex-1 justify-around">
         <SafeAreaView className="flex">
           <View className="flex-row justify-center">
-            <Image className="w-35 h-40 mb-10" source={require('../../assets/images/logo.png')} />
+            <Image className="w-35 h-40 mb-10" source={require('../assets/images/logo.png')} />
           </View>
           <View className="px-8 pt-8">
             <View className="form space-y-2">

@@ -1,4 +1,4 @@
-import { MyProfileScreen } from '@/src/screens/function';
+import { MyProfileScreen } from '@/src/screens';
 
 const MyProfilePage = () => (
   <>

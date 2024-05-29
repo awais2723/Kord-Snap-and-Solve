@@ -2,7 +2,7 @@
  * The code defines a functional component called LoginPage that renders the LoginScreen
  * component.
  */
-import { LoginScreen } from '@/src/screens/function';
+import { LoginScreen } from '@/src/screens';
 
 const LoginPage = () => <LoginScreen />;
 

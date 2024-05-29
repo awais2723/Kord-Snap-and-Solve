@@ -4,7 +4,7 @@ import { router, usePathname } from 'expo-router';
 import { useEffect } from 'react';
 
 import { useAuth } from '@/context';
-import { Loading } from '@/src/components/function';
+import { Loading } from '@/src/components';
 
 type Props = {
   children: React.ReactNode;

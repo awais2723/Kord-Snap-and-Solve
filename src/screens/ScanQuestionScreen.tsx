@@ -8,7 +8,7 @@ import DocumentScanner from 'react-native-document-scanner-plugin';
 import axios from 'axios';
 import mime from 'mime';
 
-import { Card } from '@/src/components/function';
+import { Card } from '@/src/components';
 import { SERVER_END_POINT } from '@/constants';
 
 type Props = object;

@@ -1,7 +1,7 @@
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
 
-import { DrawerContent } from '@/src/components/function';
+import { DrawerContent } from '@/src/components';
 
 const DrawerLayout = () => (
   <GestureHandlerRootView className="flex-1">
