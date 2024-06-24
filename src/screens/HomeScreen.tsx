@@ -116,7 +116,7 @@ class HomeScreen extends Component<Props, State> {
           <TouchableOpacity
             style={styles.shadow}
             className="w-11/12 h-18 bg-white rounded-lg flex-row mt-12 justify-center items-center"
-            onPress={() => router.push('/scanQuestion')}>
+            onPress={() => router.push('/scanEquation')}>
             <MaterialCommunityIcons name="math-integral" size={45} color="#6844EE" />
             <Text className="text-center text-2xl text-gray-900 font-bold ml-8">Scan Equation</Text>
             <MaterialIcons name="navigate-next" size={50} color="#6844EE" />

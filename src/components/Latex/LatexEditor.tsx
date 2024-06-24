@@ -1,38 +1,45 @@
 import { Component, createRef, RefObject } from 'react';
 import { View } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView, WebViewMessageEvent } from 'react-native-webview';
 
-type Props = object;
+type Props = { latex?: string };
 
-class LatexEditor extends Component<Props> {
+type State = {
+  latexValue?: string;
+};
+
+class LatexEditor extends Component<Props, State> {
   webviewRef: RefObject<WebView>;
 
   constructor(props: Props) {
     super(props);
     this.webviewRef = createRef<WebView>();
-    // this.state = {
-    //   latexValue: '',
-    // };
+    this.state = {
+      latexValue: '',
+    };
   }
 
   componentDidMount() {
     if (this.webviewRef && this.webviewRef.current) {
       this.webviewRef.current.requestFocus();
     }
+    if (this.state.latexValue) {
+      this.setInitialLatexValue(this.state.latexValue);
+    }
   }
 
-  // handleMessage = (event) => {
-  //   const message = event.nativeEvent.data;
-  //   this.setState({ latexValue: message });
-  // };
+  handleMessage = (event: WebViewMessageEvent) => {
+    const message = event.nativeEvent.data;
+    this.setState({ latexValue: message });
+  };
 
-  // setInitialLatexValue = (value) => {
-  //   this.webviewRef.current?.postMessage(JSON.stringify({ type: 'setLatex', value }));
-  // };
+  setInitialLatexValue = (value: string) => {
+    this.webviewRef.current?.postMessage(JSON.stringify({ type: 'setLatex', value }));
+  };
 
-  // clearMathField = () => {
-  //   this.webviewRef.current?.postMessage(JSON.stringify({ type: 'clearLatex' }));
-  // };
+  clearMathField = () => {
+    this.webviewRef.current?.postMessage(JSON.stringify({ type: 'clearLatex' }));
+  };
 
   render() {
     return (
@@ -40,7 +47,7 @@ class LatexEditor extends Component<Props> {
         <WebView
           ref={this.webviewRef}
           source={{ uri: 'https://raect-math-keyboard.vercel.app' }}
-          // onMessage={this.handleMessage}
+          onMessage={this.handleMessage}
           bounces={false}
           overScrollMode="never"
           scalesPageToFit={true}

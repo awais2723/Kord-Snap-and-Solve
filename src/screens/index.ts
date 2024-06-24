@@ -11,4 +11,5 @@ export { default as NotFoundScreen } from '@/src/screens/NotFoundScreen';
 export { default as HistoryScreen } from '@/src/screens/HistoryScreen';
 export { default as MyProfileScreen } from '@/src/screens/MyProfileScreen';
 export { default as ScanQuestionScreen } from '@/src/screens/ScanQuestionScreen';
+export { default as ScanEquationScreen } from '@/src/screens/ScanEquationScreen';
 export { default as TypeEquationScreen } from '@/src/screens/TypeEquationScreen';

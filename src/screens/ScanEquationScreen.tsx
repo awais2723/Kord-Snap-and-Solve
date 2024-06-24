@@ -1,52 +1,36 @@
-/* This code snippet is a React component called `ScanQuestionScreen` that utilizes the `useState` and
+/* This code snippet is a React component called `ScanEquationScreen` that utilizes the `useState` and
 `useEffect` hooks from React. It also imports necessary components and modules such as `Platform`,
 `PermissionsAndroid`, `Image`, `Alert`, `View`, and `DocumentScanner` for handling document scanning
 functionality. */
 import { Component } from 'react';
-import {
-  Platform,
-  PermissionsAndroid,
-  Image,
-  Alert,
-  View,
-  ActivityIndicator,
-  TouchableOpacity,
-  TextInput,
-  Text,
-} from 'react-native';
+import { Platform, PermissionsAndroid, Image, Alert, View, ActivityIndicator } from 'react-native';
 import DocumentScanner from 'react-native-document-scanner-plugin';
 import axios from 'axios';
 import mime from 'mime';
 
 import { SERVER_END_POINT } from '@/constants';
-import styles from '@/src/styles';
+import { TypeEquationScreen } from '@/src/screens';
 
 type Props = object;
 
 type State = {
   scannedImage: string;
   loading: boolean;
-  text: string;
+  latex: string;
 };
 
-class ScanQuestionScreen extends Component<Props, State> {
+class ScanEquationScreen extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       scannedImage: '',
       loading: true,
-      text: '',
+      latex: '',
     };
   }
 
   componentDidMount() {
     this.scanDocument();
-  }
-
-  removeExtraSpaces(str: string) {
-    str = str.trim();
-    str = str.replace(/\s+/g, ' ');
-    return str;
   }
 
   sendImage = async (uri: string) => {
@@ -66,7 +50,7 @@ class ScanQuestionScreen extends Component<Props, State> {
         };
 
         try {
-          const response = await axios.post(`${SERVER_END_POINT}/text`, payload, {
+          const response = await axios.post(`${SERVER_END_POINT}/latex`, payload, {
             headers: {
               'Content-Type': 'application/json',
             },
@@ -74,7 +58,7 @@ class ScanQuestionScreen extends Component<Props, State> {
           });
           // eslint-disable-next-line no-console
           console.log('Response:', response.data);
-          this.setState({ text: this.removeExtraSpaces(response.data.text) });
+          this.setState({ latex: response.data.latex });
           this.setState({ loading: false });
           this.setState({ scannedImage: '' });
         } catch (error) {
@@ -109,7 +93,7 @@ class ScanQuestionScreen extends Component<Props, State> {
   };
 
   render() {
-    const { scannedImage, loading, text } = this.state;
+    const { scannedImage, loading, latex } = this.state;
 
     if (scannedImage || loading) {
       return (
@@ -122,28 +106,12 @@ class ScanQuestionScreen extends Component<Props, State> {
       );
     }
 
-    if (text) {
-      return (
-        <View className="bg-gray-100 flex flex-col flex-1 justify-start items-center">
-          <TextInput
-            className="h-[600px] w-full text-black bg-white p-3"
-            style={{ textAlignVertical: 'top' }}
-            value={text}
-            onChangeText={e => this.setState({ text: e })}
-            multiline
-          />
-          <TouchableOpacity
-            style={styles.shadow}
-            className="border-2 w-4/5 mt-8 bg-primary border-gray-300 rounded-md py-2 flex flex-row justify-center items-center"
-            onPress={() => {}}>
-            <Text className="text-center text-white font-bold text-xl ml-2">Next</Text>
-          </TouchableOpacity>
-        </View>
-      );
+    if (latex) {
+      return <TypeEquationScreen latex={latex} />;
     }
 
     return <View className="bg-gray-100 flex flex-col flex-1 justify-start items-center" />;
   }
 }
 
-export default ScanQuestionScreen;
+export default ScanEquationScreen;
